@@ -1,4 +1,4 @@
-n = int(input("numero di 4 cifre:"))
+n = int(input("Inserire numero di 4 cifre:"))
 m = n // 1000
 c = n // 100 - m * 10
 d = n // 10 - m * 100 - c * 10
