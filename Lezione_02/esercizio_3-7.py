@@ -16,17 +16,17 @@ for item in invitati:
         case "Anne Hathaway":
             print (f"{item} sei stata invitata alla mia cena")
         case "Dante Alighieri":
-            print (f"{item} sei stata invitata alla mia cena")
+            print (f"{item} sei stato invitato alla mia cena")
         case "Federer":
-            print (f"{item} sei stata invitata alla mia cena")
+            print (f"{item} sei stato invitato alla mia cena")
         case "Gesù":
-            print (f"{item} sei stata invitata alla mia cena")
+            print (f"{item} sei stato invitato alla mia cena")
         case "Battiato":
-            print (f"{item} sei stata invitata alla mia cena")    
+            print (f"{item} sei stato invitato alla mia cena")    
         case "Margherita":
             print (f"{item} sei stata invitata alla mia cena")    
         case "Angelo":
-            print (f"{item} sei stata invitata alla mia cena")
+            print (f"{item} sei stato invitato alla mia cena")
 
 print ("ho scoperto che potrò invitare solo due persone alla cena")
 while len(invitati) > 2:
