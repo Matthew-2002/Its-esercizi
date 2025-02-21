@@ -90,6 +90,5 @@ invitati.pop()
 
 print (f"{invitati[0]} sei ancora invitata alla mia cena")
 print (f"{invitati[1]} sei ancora invitata alla mia cena")
-del invitati[0]
-del invitati[0]
+del invitati[:: -1]
 print (invitati)

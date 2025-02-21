@@ -23,14 +23,15 @@ invitati[2] = "Federer"
 print (f"{invitati[0]} sei stata invitata a cena")
 print (f"{invitati[1]} sei stato invitato a cena")
 print (f"{invitati[2]} sei stato invitato a cena")
-print (f"{invitati[3] }sei stato invitato a cena")
+print (f"{invitati[3]} sei stato invitato a cena")
 
 print ("-----------")
 
 print("è stato trovato un tavolo più grande, inviterò altre tre persone")
 
 invitati.insert (0, "Battiato")
-invitati.insert (2, "Margherita")
+metà:int = len(invitati) //2
+invitati.insert (metà, "Margherita")
 invitati.append ("Angelo")
 
 print (f"{invitati[0]} sei stato invitato a cena")

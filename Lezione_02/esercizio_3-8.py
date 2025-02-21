@@ -18,16 +18,21 @@ Print the list to show that its order has changed.'''
 
 
 luoghiDaVisitare:list[str] = ["Cairo", "Islanda", "Caraibi", "Paesi Scandinavi", "America"]
-print (luoghiDaVisitare)
+print (f"{', '.join(luoghiDaVisitare)}\n")
 
 orderedlist:list[str] = sorted(luoghiDaVisitare)
-print (orderedlist)
+print (f"{', '.join(orderedlist)}\n")
+
+print (f"{', '.join(luoghiDaVisitare)}\n")
 
 reverselist:list[str] = sorted(luoghiDaVisitare, reverse=True)
-print (reverselist)
+print (f"{', '.join(reverselist)}\n")
+
+luoghiDaVisitare:list[str] = sorted(reverselist, reverse=False)
+print (f"{', '.join(luoghiDaVisitare)}\n")
 
 luoghiDaVisitare.sort()
-print (luoghiDaVisitare)
+print (f"{', '.join(luoghiDaVisitare)}\n")
 
 luoghiDaVisitare.sort(reverse=True)
-print (luoghiDaVisitare)
+print (f"{', '.join(luoghiDaVisitare)}\n")
