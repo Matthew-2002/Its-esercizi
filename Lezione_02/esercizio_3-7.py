@@ -40,13 +40,56 @@ for item in invitati:
         case "Angelo":
             print (f"{item} sei stato invitato alla mia cena")
 
+invitati:list[str] = ["Anne Hathaway", "Dante Alighieri", "Einstein", "Gesù"]
+print (f"{invitati[0]} sei stata invitata a cena")
+print (f"{invitati[1]} sei stato invitato a cena")
+print (f"{invitati[2]} sei stato invitato a cena")
+print (f"{invitati[3]} sei stato invitato a cena")
+
+print ("-----------")
+
+print(invitati[2],"non sara più invitato")
+
+invitati[2] = "Federer"
+
+print (f"{invitati[0]} sei stata invitata a cena")
+print (f"{invitati[1]} sei stato invitato a cena")
+print (f"{invitati[2]} sei stato invitato a cena")
+print (f"{invitati[3] }sei stato invitato a cena")
+
+print ("-----------")
+
+print("è stato trovato un tavolo più grande, inviterò altre tre persone")
+
+invitati.insert (0, "Battiato")
+invitati.insert (2, "Margherita")
+invitati.append ("Angelo")
+
+print (f"{invitati[0]} sei stato invitato a cena")
+print (f"{invitati[1]} sei stata invitata a cena")
+print (f"{invitati[2]} sei stata invitata a cena")
+print (f"{invitati[3]} sei stato invitato a cena")
+print (f"{invitati[4]} sei stato invitato a cena")
+print (f"{invitati[5]} sei stato invitato a cena")
+print (f"{invitati[6]} sei stato invitato a cena")
+
+print ("-----------")
+
 print ("ho scoperto che potrò invitare solo due persone alla cena")
-while len(invitati) > 2:
-    item = invitati [-1]
-    invitati.pop()
-    print (f"Perdonami {item} purtroppo non potrai venire alla cena")
-for item in invitati:
-    print (f"{item} sei ancora invitato/a alla mia cena")
-del invitati [1]
-del invitati [0]
+
+print (f"{invitati[0]} purtroppo non potrai venire alla cena")
+invitati.pop(0)
+print (f"{invitati[-1]} purtroppo non potrai venire alla cena")
+invitati.pop()
+print (f"{invitati[-1]} purtroppo non potrai venire alla cena")
+invitati.pop()
+print (f"{invitati[-1]} purtroppo non potrai venire alla cena")
+invitati.pop()
+print (f"{invitati[-1]} purtroppo non potrai venire alla cena")
+invitati.pop()
+
+print (f"{invitati[0]} sei ancora invitata alla mia cena")
+print (f"{invitati[1]} sei ancora invitata alla mia cena")
+del invitati[0]
+del invitati[0]
 print (invitati)

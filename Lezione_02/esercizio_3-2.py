@@ -5,5 +5,8 @@ personalized with the person’s name.'''
 
 
 names:list[str] = ["Lorenzo", "Angelo", "Ares", "Ottavio"] 
-for item in names:
-    print (f"{item} sei stato invitato alla mia festa")
+text = "ti voglio bene"
+print (names[0], text)
+print (names[1], text)
+print (names[2], text)
+print (names[3], text)

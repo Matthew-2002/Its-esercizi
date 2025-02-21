@@ -11,11 +11,19 @@ name of the new person you are inviting.
 in your list.'''
 
 
-invitati:list = ["Anne Hathaway", "Dante Alighieri", "Einstein", "Gesù"]  
-for item in invitati:
-    print (f"{item} sei stato/a invitato/a alla mia cena")
+invitati:list[str] = ["Anne Hathaway", "Dante Alighieri", "Einstein", "Gesù"]
+print (f"{invitati[0]} sei stata invitata a cena")
+print (f"{invitati[1]} sei stato invitato a cena")
+print (f"{invitati[2]} sei stato invitato a cena")
+print (f"{invitati[3]} sei stato invitato a cena")
 
-print ("Einstein")
-invitati [invitati.index("Einstein")] = "Federer"
-for item in invitati:
-    print (f"{item} sei stato/a invitato/a alla mia cena")
+print ("-----------")
+
+print(invitati[2],"non sara più invitato")
+
+invitati[2] = "Federer"
+
+print (f"{invitati[0]} sei stata invitata a cena")
+print (f"{invitati[1]} sei stato invitato a cena")
+print (f"{invitati[2]} sei stato invitato a cena")
+print (f"{invitati[3] }sei stato invitato a cena")

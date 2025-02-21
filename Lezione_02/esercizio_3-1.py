@@ -2,6 +2,8 @@
 Print each person’s name by accessing each element in the list, one at a time.'''
 
 
-names:list[str] = ["Lorenzo", "Angelo", "Ares", "Ottavio"] 
-for item in names:
-    print (item)
+names:list[str] = ["Lorenzo", "Angelo", "Ares", "Ottavio"]
+print(names[0])
+print(names[1])
+print(names[2])
+print(names[3])
