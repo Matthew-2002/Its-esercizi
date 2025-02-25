@@ -11,7 +11,7 @@ considerando anche quelle ottenute con i buoni sconto.
 Mostri quanti buoni sconto avanzano al termine dell'acquisto.'''
 
 
-euro_tot = int(input("Inserisci totale spesa: "))
+euro_tot = int(input("Inserisci totale spesa:\n"))
 barrete_extra = euro_tot // 6
 buoni_avanzati = euro_tot % 6
 barrette_totali = euro_tot + barrete_extra

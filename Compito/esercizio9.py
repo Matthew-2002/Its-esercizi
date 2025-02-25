@@ -31,7 +31,7 @@ while True:
     else:
         pigreco += 4 / div
     if round(pigreco, 5) == approx:
-        print(f"sono stati necessari {i+1} termini della serie per arrivare all'approssimazione")
+        print(f"\nsono stati necessari {i+1} termini della serie per arrivare all'approssimazione\n")
         break
     div += 2
     i += 1

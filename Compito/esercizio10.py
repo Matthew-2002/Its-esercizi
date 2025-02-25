@@ -34,12 +34,12 @@ massimi:list[int] = []
 
 # imposto ciclo e studio caso inserimento 0
 while True:
-    numero:int = int(input("Inserisci un numero (0 per terminare):"))
+    numero:int = int(input("Inserisci un numero (0 per terminare):\n"))
     
     if numero == 0:
         
         # stampo somma pari e media dispari anche nel caso di nessun elemento
-        print (f"Somma dei numeri pari: {somma_pari}")
+        print (f"\nSomma dei numeri pari: {somma_pari}")
         if n_dis == 0:
             print (f"Media dei numeri dispari: 0")
         else: 
@@ -47,7 +47,7 @@ while True:
         
         # controllo se ci sono elementi nel dizionario per la frequenza
         if len(frequenza) == 0:
-            print("non hai aggiunto elementi")
+            print("non hai aggiunto elementi\n")
         else:
             
             # salvo i numeri più ricorrenti in una lista
@@ -57,7 +57,7 @@ while True:
                     Max = frequenza[item]
                 elif frequenza[item] == Max:
                     massimi.append(item)
-            print(f"Numero/i più frequente/i: {massimi} ({Max} volte)")
+            print(f"Numero/i più frequente/i: {massimi} ({Max} volta/e)\n")
         break
     
     # se l'utente inserisce numero, aggiorno somma pari, e somma dispari per la media

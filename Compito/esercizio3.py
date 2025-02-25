@@ -5,7 +5,7 @@ Il programma deve poi visualizzare la stringa ottenuta in output. Per risolvere
 il problema non si deve utilizzare alcun tipo di funzione, ma esclusivamente i cicli.'''
 
 
-stringa:str = input("inserisci caratteri da ribaltare:")
+stringa:str = input("inserisci caratteri da ribaltare:\n")
 stringa_ribaltata:str = ""
 
 for item in stringa:

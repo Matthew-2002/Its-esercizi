@@ -5,9 +5,11 @@ considerata nell'elaborazione).
 Per ogni parola inserita, il programma deve verificare se il primo e l'ultimo carattere 
 sono uguali e visualizzare un messaggio corrispondente.'''
 
-parola:str = input("inserisci una parola:")
+parola:str = input("inserisci una parola:\n")
 
 while parola != "fine":
     if parola[0] == parola[-1]:
-        print ("il primo e l'ulitimo carattere inseriti corrispondono")
-    parola:str = input("inserisci una parola:")
+        print("il primo e l'ulitimo carattere inseriti corrispondono")
+    else:
+        print("Primo e ultimo carattere non corrispondono")
+    parola:str = input("inserisci una parola:\n")

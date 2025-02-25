@@ -16,11 +16,11 @@ Se l'utente inserisce i numeri 5, 8, 3, 12, 7, il programma deve stampare:
 *******
 '''
 
-numero_1:int = int(input("inserisci il primo numero"))
-numero_2:int = int(input("inserisci il secondo numero"))
-numero_3:int = int(input("inserisci il terzo numero"))
-numero_4:int = int(input("inserisci il quarto numero"))
-numero_5:int = int(input("inserisci il quinto numero"))
+numero_1:int = int(input("inserisci il primo numero\n"))
+numero_2:int = int(input("inserisci il secondo numero\n"))
+numero_3:int = int(input("inserisci il terzo numero\n"))
+numero_4:int = int(input("inserisci il quarto numero\n"))
+numero_5:int = int(input("inserisci il quinto numero\n"))
 
 lista:list[int] = [numero_1, numero_2, numero_3, numero_4, numero_5]
 asterischi:list[str] = []
