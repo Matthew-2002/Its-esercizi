@@ -19,20 +19,19 @@ Nota: Il programma deve iterare fino a raggiungere ciascuna delle soglie indicat
 il numero di termini necessari.'''
 
 
-
+i = 2
 div:int = 3
-i = 0
 pigreco:float = 4
-approx:float = 3.14159
+approx:float = 3.141
 
 while True:
     if i % 2 == 0:
         pigreco -= 4 / div
     else:
         pigreco += 4 / div
-    if round(pigreco, 5) == approx:
-        print(f"\nsono stati necessari {i+1} termini della serie per arrivare all'approssimazione\n")
+    if round(pigreco, 3) == approx:
+        print(f"\nsono stati necessari {i} termini della serie per arrivare all'approssimazione\n")
         break
-    div += 2
     i += 1
+    div += 2
     

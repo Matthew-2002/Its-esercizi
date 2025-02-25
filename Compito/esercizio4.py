@@ -19,7 +19,7 @@ Max = 0
 Min = 0
 
 while True:
-    n = float(input("inserire un numero: (negativo per uscire):\n"))
+    n = float(input("inserire un numero: (negativo per uscire): "))
     
     # imposto la condizione di interruzione del ciclo n < 0
     if n < 0:

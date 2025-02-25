@@ -16,17 +16,16 @@ Se l'utente inserisce i numeri 5, 8, 3, 12, 7, il programma deve stampare:
 *******
 '''
 
-numero_1:int = int(input("inserisci il primo numero\n"))
-numero_2:int = int(input("inserisci il secondo numero\n"))
-numero_3:int = int(input("inserisci il terzo numero\n"))
-numero_4:int = int(input("inserisci il quarto numero\n"))
-numero_5:int = int(input("inserisci il quinto numero\n"))
+numero_1:int = int(input("inserisci il primo numero "))
+numero_2:int = int(input("inserisci il secondo numero "))
+numero_3:int = int(input("inserisci il terzo numero "))
+numero_4:int = int(input("inserisci il quarto numero "))
+numero_5:int = int(input("inserisci il quinto numero "))
 
 lista:list[int] = [numero_1, numero_2, numero_3, numero_4, numero_5]
 asterischi:list[str] = []
 
 # inizializzo il contatore, imposto il ciclo per ogni numero nella lista e lo controllo
-
 for item in lista:
     if item > 30 or item < 1:
         print (f"I numeri devono essere compresi tra 1 e 30")
