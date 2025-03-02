@@ -27,4 +27,27 @@ Rettili:list[str] = ["serpente", "lucertola", "tartaruga", "coccodrillo"]
 Uccelli:list[str] = ["aquila", "pappagallo", "gufo", "falco"]
 Pesci:list[str] = ["squalo", "trota", "salmone", "carpa"]
 
-animale:str = input("inserisciun animale da classificare: ")
+animale:str = input("inserisci un animale da classificare: ")
+
+match animale:
+    case animale if animale in Mammiferi:
+        print(f"{animale} appartiene alla categoria dei mammiferi")
+    case animale if animale in Rettili:
+        print(f"{animale} appartiene alla categoria dei rettili")
+    case animale if animale in Uccelli:
+        print(f"{animale} appartiene alla categoria dei uccelli")
+    case animale if animale in Pesci:
+        print(f"{animale} appartiene alla categoria dei pesci")
+    case _:
+        print(f"Non so dire in quale categoria classificare l'animale {animale}!")         
+
+
+
+
+
+
+
+
+
+
+
