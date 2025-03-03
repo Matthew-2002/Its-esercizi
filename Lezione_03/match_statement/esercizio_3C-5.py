@@ -52,16 +52,3 @@ match informazioni:
         print("Accesso ristretto! Solo visualizzazione dei contenuti")
     case _:
         print("Attenzione! Ruolo non riconsciuto! Accesso Negato!")
-
-
-
-
-
-
-
-
-
-
-
-
-

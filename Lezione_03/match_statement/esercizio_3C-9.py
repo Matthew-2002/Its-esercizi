@@ -11,10 +11,23 @@ il  match statement per determinare la sua posizione del punto inserito nel pian
 - Quarto quadrante → Se x > 0 e y < 0, stampare: "Il punto si trova nel quarto quadrante."'''
 
 
-punto: tuple[int,int] = (
-                        int(input("Inserisci coordinata \"x\": ")),
-                        int(input("Inserisci coordinata \"y\": "))
-                        )
-match punto:
+x, y = (
+        int(input("Inserisci coordinata \"x\": ")),
+        int(input("Inserisci coordinata \"y\": "))
+        )
+match x, y:
     case (0, 0):
         print("Il punto si trova nell'origine.")
+    case (0, y):
+        print("Il punto si trova sull'asse X.")
+    case (x, 0):
+        print("Il punto si trova sull'asse Y.")
+    case x, y if x > 0 and y > 0:
+        print("Il punto si trova nel primo quadrante.")
+    case x, y if x < 0 and y > 0:
+        print("Il punto si trova nel secondo quadrante.")
+    case x, y if x < 0 and y < 0:
+        print("Il punto si trova nel terzo quadrante.")
+    case x, y if x > 0 and y < 0:
+        print("Il punto si trova nel quarto quadrante.")
+    

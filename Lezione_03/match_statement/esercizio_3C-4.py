@@ -22,21 +22,34 @@ Digita il nome di un animale: cane
 Output: cane appartiene alla categoria dei Mammiferi!'''
 
 
-Mammiferi:list[str] = ["cane", "gatto", "cavallo", "elefante", "leone"]
-Rettili:list[str] = ["serpente", "lucertola", "tartaruga", "coccodrillo"]
-Uccelli:list[str] = ["aquila", "pappagallo", "gufo", "falco"]
-Pesci:list[str] = ["squalo", "trota", "salmone", "carpa"]
+mammiferi:list[str] =  [
+                        "cane", "gatto", 
+                        "cavallo", "elefante", 
+                        "leone"
+                       ]
+rettili:list[str] = [
+                        "serpente", "lucertola", 
+                        "tartaruga", "coccodrillo"
+                    ]
+uccelli:list[str] = [
+                        "aquila", "pappagallo", 
+                        "gufo", "falco"
+                    ]
+pesci:list[str] = [
+                    "squalo", "trota", 
+                    "salmone", "carpa"
+                  ]
 
 animale:str = input("inserisci un animale da classificare: ")
 
 match animale:
-    case animale if animale in Mammiferi:
+    case animale if animale in mammiferi:
         print(f"{animale} appartiene alla categoria dei mammiferi")
-    case animale if animale in Rettili:
+    case animale if animale in rettili:
         print(f"{animale} appartiene alla categoria dei rettili")
-    case animale if animale in Uccelli:
+    case animale if animale in uccelli:
         print(f"{animale} appartiene alla categoria dei uccelli")
-    case animale if animale in Pesci:
+    case animale if animale in pesci:
         print(f"{animale} appartiene alla categoria dei pesci")
     case _:
         print(f"Non so dire in quale categoria classificare l'animale {animale}!")         
