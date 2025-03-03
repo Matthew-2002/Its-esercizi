@@ -37,7 +37,7 @@ Categorie di habitat:
 
 
 
-Mammiferi:list[str] = [
+mammiferi:list[str] = [
                         "cane", 
                         "gatto", 
                         "cavallo", 
@@ -46,13 +46,13 @@ Mammiferi:list[str] = [
                         "balena", 
                         "delfino"
                                     ]
-Rettili:list[str] = [
+rettili:list[str] = [
                         "serpente", 
                         "lucertola", 
                         "tartaruga", 
                         "coccodrillo"
                                         ]
-Uccelli:list[str] = [
+uccelli:list[str] = [
                         "aquila", 
                         "pappagallo", 
                         "gufo", 
@@ -62,7 +62,7 @@ Uccelli:list[str] = [
                         "gallina", 
                         "tacchino"
                                         ]
-Pesci:list[str] = [
+pesci:list[str] = [
                         "squalo", 
                         "trota", 
                         "salmone", 
@@ -73,58 +73,66 @@ animale:str = input("inserisci un animale da classificare: ")
 habitat:str = input("inserire l'habitat: ")
 
 match animale:
-    case animale if animale in Mammiferi:
-        animal_type:str = "Mammiferi"
-        scheda_animale:dict[str] = {"animale": animale, 
-                            "tipo di animale": animal_type, 
-                            "habitat": habitat}
+    
+    case animale if animale in mammiferi:
+        scheda_animale:dict[str] = {
+                                    "animale": animale, 
+                                    "habitat": habitat
+                                    }
         match scheda_animale:
-            case {"animale": "balena" | "delfino", "habitat": "acqua"}:
+            case {"animale": "balena" | "delfino", 
+                  "habitat": "acqua"}:
                 print(f"l'animale {animale} può vivere nell'habitat {habitat}")
             case {"habitat": "terra"}:
                 print(f"l'animale {animale} può vivere nell'habitat {habitat}")
             case _:
                 print(f"L'animale {animale} non può vivere nell'habitat {habitat}")
-    case animale if animale in Rettili:
-        animal_type:str = "Rettili"
-        scheda_animale:dict[str] = {"animale": animale, 
-                            "tipo di animale": animal_type, 
-                            "habitat": habitat}
+    
+    case animale if animale in rettili:
+        scheda_animale:dict[str] = {
+                                    "animale": animale, 
+                                    "habitat": habitat
+                                    }
         match scheda_animale:
-            case {"animale": "serpente" | "lucertola", "habitat": "terra"}:
+            case {"habitat": "terra" | "acqua"}:
                 print(f"l'animale {animale} può vivere nell'habitat {habitat}")
             case {"habitat": "acqua"}:
                 print(f"l'animale {animale} può vivere nell'habitat {habitat}")
             case _:
                 print(f"l'animale {animale} non può vivere nell'habitat {habitat}")
-    case animale if animale in Uccelli:
+    
+    case animale if animale in uccelli:
         animal_type:str = "Uccelli"
-        scheda_animale:dict[str] = {"animale": animale, 
-                            "tipo di animale": animal_type, 
-                            "habitat": habitat}
+        scheda_animale:dict[str] = {
+                                    "animale": animale,                                  
+                                    "habitat": habitat
+                                    }
         match scheda_animale:
-            case {"animale": "cigno" | "anatra", "habitat": "acqua"}:
+            case {"animale": "cigno" | "anatra", 
+                  "habitat": "acqua"}:
                 print(f"l'animale {animale} può vivere nell'habitat {habitat}")
             case {"habitat": "aria"}:
                 print(f"l'animale {animale} può vivere nell'habitat {habitat}")
             case _:
                 print(f"l'animale {animale} non può vivere nell'habitat {habitat}")     
-    case animale if animale in Pesci:
+    case animale if animale in pesci:
         animal_type:str = "Pesci"
-        scheda_animale:dict[str] = {"animale": animale, 
-                            "tipo di animale": animal_type, 
-                            "habitat": habitat}
+        scheda_animale:dict[str] = {
+                                    "animale": animale,                                   
+                                    "habitat": habitat
+                                    }
         match scheda_animale:
             case {"habitat": "acqua"}:
                 print(f"l'animale {animale} può vivere nell'habitat {habitat}")
             case _:
                 print(f"l'animale {animale} non può vivere nell'habitat {habitat}")
     case _:
-        print(f"l'animale o l'habitat non sono riconosciuti!")      
-        animal_type:str = "Unknown" 
-        scheda_animale:dict[str] = {"animale": animale, 
-                            "tipo di animale": animal_type, 
-                            "habitat": habitat} 
+
+        print(f"l'animale o habitat non riconosciuto")
+        
+
+
+
 
 
 
