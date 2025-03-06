@@ -115,6 +115,7 @@ match animale:
                 print(f"l'animale {animale} può vivere nell'habitat {habitat}")
             case _:
                 print(f"l'animale {animale} non può vivere nell'habitat {habitat}")     
+    
     case animale if animale in pesci:
         animal_type:str = "Pesci"
         scheda_animale:dict[str] = {
