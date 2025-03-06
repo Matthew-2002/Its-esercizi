@@ -2,5 +2,5 @@
 “Hello Eric, would you like to learn some Python today?”'''
 
 
-name = "Adriano"
-print (f"Hello {name}, how are you today?")
+name: str = "Adriano"
+print(f"Hello {name}, how are you today?")

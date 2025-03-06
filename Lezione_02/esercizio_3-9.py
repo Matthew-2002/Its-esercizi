@@ -3,5 +3,10 @@ use len() to print a message indicating the number of people you’re
 inviting to dinner.'''
 
 
-names:list[str] = ["Lorenzo", "Angelo", "Ares", "Ottavio"]
+names:list[str] = [
+    "Lorenzo", 
+    "Angelo", 
+    "Ares", 
+    "Ottavio"
+    ]
 print (f"Sto invitando a cena {len(names)} persone")

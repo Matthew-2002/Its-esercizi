@@ -4,11 +4,11 @@ ends at one million. Also, use the sum() function to see how quickly Python
 can add a million numbers.'''
 
 
-million:list = []
-for i in range (1, 1000001):
+million: list = []
+for i in range(1, 1000001):
     million.append (i)
-print (million)
+print(million)
 
-print (max(million))
-print (min(million))
-print (sum(million))
+print(max(million))
+print(min(million))
+print(sum(million))

@@ -8,21 +8,21 @@ pizzas are:, and then use a for loop to print the second list. Make sure each ne
 is stored in the appropriate list.'''
 
 
-pizza:list[str] = ["Margherita", "Boscaiola", "Diavola"]
+pizza: list[str] = ["Margherita", "Boscaiola", "Diavola"]
 
-friend_pizzas:list[str] = pizza[:]
+friend_pizzas: list[str] = pizza[:]
 
-pizza.append ("Contadina")
+pizza.append("Contadina")
 
-friend_pizzas.append ("Capricciosa")
+friend_pizzas.append("Capricciosa")
 
-print ("My favorite pizzas are:")
+print("My favorite pizzas are:")
 
 for item in pizza:
-    print (item)
+    print(item)
     
-print ("My friend’s favorite pizzas are:")
+print("My friend’s favorite pizzas are:")
 
 for item in friend_pizzas:
-    print (item)
+    print(item)
     

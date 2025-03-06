@@ -3,7 +3,7 @@ and then print that person’s name in lowercase, uppercase,
 and title case.'''
 
 
-name = "Adriano"
-print (name.lower())
-print (name.upper())
-print (name.title())
+name: str = "Adriano"
+print(name.lower())
+print(name.upper())
+print(name.title())

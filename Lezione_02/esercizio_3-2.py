@@ -4,7 +4,7 @@ The text of each message should be the same, but each message should be
 personalized with the person’s name.'''
 
 
-names:list[str] = ["Lorenzo", "Angelo", "Ares", "Ottavio"] 
+names: list[str] = ["Lorenzo", "Angelo", "Ares", "Ottavio"] 
 text = "ti voglio bene"
 print (names[0], text)
 print (names[1], text)

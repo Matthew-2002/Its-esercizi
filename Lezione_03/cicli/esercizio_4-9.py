@@ -2,5 +2,5 @@
 generate a list of the first 10 cubes.'''
 
 
-cubes:list[int] = [i**3 for i in range (1, 11)]
-print (cubes)
+cubes: list[int] = [i**3 for i in range (1, 11)]
+print(cubes)

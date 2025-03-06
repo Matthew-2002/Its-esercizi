@@ -2,7 +2,7 @@
 Use a for loop to print the numbers in your list.'''
 
 
-threes:list = []
-for i in range (3, 31, 3):
-    threes.append (i)
-    print (threes)
+threes: list = []
+for i in range(3, 31, 3):
+    threes.append(i)
+    print(threes)

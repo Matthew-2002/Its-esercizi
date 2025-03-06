@@ -17,22 +17,28 @@ Print the list to show that its order has been changed.
 Print the list to show that its order has changed.'''
 
 
-luoghiDaVisitare:list[str] = ["Cairo", "Islanda", "Caraibi", "Paesi Scandinavi", "America"]
-print (f"{', '.join(luoghiDaVisitare)}\n")
+luoghiDaVisitare: list[str] = [
+                                "Cairo", 
+                                "Islanda", 
+                                "Caraibi", 
+                                "Paesi Scandinavi", 
+                                "America"
+                                ]
+print(f"{', '.join(luoghiDaVisitare)}\n")
 
-orderedlist:list[str] = sorted(luoghiDaVisitare)
-print (f"{', '.join(orderedlist)}\n")
+orderedlist: list[str] = sorted(luoghiDaVisitare)
+print(f"{', '.join(orderedlist)}\n")
 
-print (f"{', '.join(luoghiDaVisitare)}\n")
+print(f"{', '.join(luoghiDaVisitare)}\n")
 
 reverselist:list[str] = sorted(luoghiDaVisitare, reverse=True)
-print (f"{', '.join(reverselist)}\n")
+print(f"{', '.join(reverselist)}\n")
 
 luoghiDaVisitare:list[str] = sorted(reverselist, reverse=False)
-print (f"{', '.join(luoghiDaVisitare)}\n")
+print(f"{', '.join(luoghiDaVisitare)}\n")
 
 luoghiDaVisitare.sort()
-print (f"{', '.join(luoghiDaVisitare)}\n")
+print(f"{', '.join(luoghiDaVisitare)}\n")
 
 luoghiDaVisitare.sort(reverse=True)
-print (f"{', '.join(luoghiDaVisitare)}\n")
+print(f"{', '.join(luoghiDaVisitare)}\n")

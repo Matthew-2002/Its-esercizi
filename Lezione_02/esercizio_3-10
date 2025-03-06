@@ -5,4 +5,9 @@ that creates a list containing these items and then uses each
 function introduced in this chapter at least once.'''
 
 
-città:list[str] = ["Ferrara", "Oslo", "Cairo", "Parigi"]
+città:list[str] = [
+    "Ferrara", 
+    "Oslo", 
+    "Cairo", 
+    "Parigi"
+    ]

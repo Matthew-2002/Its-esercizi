@@ -5,7 +5,11 @@ Store the names of these animals in a list, and then use a for loop to print out
 a sentence, such as Any of these animals would make a great pet!'''
 
 
-animali:list[str] = ["dog", "cat", "turtle"]
+animali: list[str] = [
+    "dog", 
+    "cat", 
+    "turtle"
+    ]
 for item in animali:
-    print (f"{item} is a great pet")
-print ("Any of these animals would make a great pet!")
+    print(f"{item} is a great pet")
+print("Any of these animals would make a great pet!")

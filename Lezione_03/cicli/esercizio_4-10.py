@@ -11,13 +11,13 @@ of the list.
 Then use a slice to print the last three items in the list.'''
 
 
-cubes:list[int] = [i**3 for i in range (1, 11)]
-print (f"The first three items in the list are:")
-print (cubes[:3])
+cubes: list[int] = [i**3 for i in range (1, 11)]
+print(f"The first three items in the list are:")
+print(cubes[:3])
 
-mid:int = len (cubes) // 2
-print ("Three items from the middle of the list are:")
-print (cubes[mid - 1 : mid + 2])
+mid: int = len (cubes) // 2
+print("Three items from the middle of the list are:")
+print(cubes[mid - 1: mid + 2])
 
-print ("The last three items in the list are:")
-print (cubes[-3:])
+print("The last three items in the list are:")
+print(cubes[-3:])

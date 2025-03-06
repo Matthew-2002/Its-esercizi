@@ -17,28 +17,28 @@ and another
 
 
 
-car:str = "Ferrari"
-drink:str = "Water"
-cocktail:str = "negroni"
-person:str = "Matteo"
-subject:str = "Math"
+car: str = "Ferrari"
+drink: str = "Water"
+cocktail: str = "Negroni"
+person: str = "Matteo"
+subject: str = "Math"
 
 print("Is car == 'Ferrari'? I predict True")
 
 print("Is car == 'Nissan'? I predict False")
 
-print("Is drink == 'Ferrari'? I predict True")
+print("Is drink == 'Water'? I predict True")
 
-print("Is drink == 'Ferrari'? I predict False")
+print("Is drink == 'Fanta'? I predict False")
 
-print("Is cocktail == 'Ferrari'? I predict True")
+print("Is cocktail == 'Negroni'? I predict True")
 
-print("Is cocktail == 'Ferrari'? I predict False")
+print("Is cocktail == 'Whisky sour'? I predict False")
 
-print("Is person == 'Ferrari'? I predict True")
+print("Is person == 'Matteo'? I predict True")
 
-print("Is person == 'Ferrari'? I predict False")
+print("Is person == 'Filippo'? I predict False")
 
-print("Is subject == 'Ferrari'? I predict True")
+print("Is subject == 'Math'? I predict True")
 
-print("Is subject == 'Ferrari'? I predict False")
+print("Is subject == 'English'? I predict False")
