@@ -7,8 +7,8 @@ Call the function a second time using keyword arguments.'''
 
 
 def make_shirt(size: str, message: str):
-    print(f"The shirt has an {size} size and has \"{message}\" printed on it")
+    print(f"The shirt has a {size} size and has \"{message}\" printed on it")
 
-make_shirt("M", "Don't worry be happy!")
+make_shirt("medium", "Don't worry be happy!")
 
-make_shirt(message= "Hello World!", size= "S")
+make_shirt(message= "Hello World!", size= "small")
