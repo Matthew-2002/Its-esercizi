@@ -14,7 +14,7 @@ function call that includes the number of songs on an album.
 
 
 
-def make_album(artist: str, title: str, numero_canzoni: int =None):
+def make_album(artist: str, title: str, numero_canzoni: str =None):
     album: dict[str] = {
                         "Artist": artist, 
                         "Title": title, 
@@ -22,10 +22,15 @@ def make_album(artist: str, title: str, numero_canzoni: int =None):
                         }
     return album
 
+def print_album(album: dict[str]):
+    for key, value in album.items():
+        print(f"{key}: \"{value}\"", end= " | ")
 
-print(make_album("Michael Jackson", "Thriller"))
-print(make_album("Pink Floyd", "The Dark Side of the Moon"))
-print(make_album("AC/DC","Back in Black", ))
-
-print(make_album("Michael Jackson", "Thriller"))
+print_album(make_album("Michael Jackson", "Thriller"))
+print()
+print_album(make_album("Pink Floyd", "The Dark Side of the Moon"))
+print()
+print_album(make_album("AC/DC","Back in Black"))
+print()
+print_album(make_album("Michael Jackson", "Thriller", "9"))
 
