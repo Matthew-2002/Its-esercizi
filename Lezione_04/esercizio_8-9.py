@@ -4,4 +4,7 @@ which prints each text message.'''
 
 
 messages: list[str] = ["Ciao", "Come stai?", "Spero tutto bene"]
-def print_messages()
+def show_messages():
+    for item in messages:
+        print(item)
+show_messages()
