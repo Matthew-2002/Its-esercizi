@@ -16,8 +16,7 @@ show_messages()
 
 print("------")
 
-def send_messages():
-    sent_messages= messages[:]
+def send_messages(sent_messages= messages[:]):    
     for item in sent_messages:
         print(item)
         messages.remove(item) 
