@@ -8,8 +8,9 @@ time.'''
 
 def inside_sanwich(*elementi) -> None:
     for item in elementi:
-        print(f"Nel panino vuoi {item}")
+        print(f"Nel panino vuoi {item}", end = ", ")
+    print()
 
-inside_sanwich(("elemento 1", "elemento 2"))
-inside_sanwich(("elemento 1", "elemento 2", "elemento 3"))
-inside_sanwich(("elemento 1", "elemento 2", "elemento 3", "elemento 4"))
+inside_sanwich(*("elemento 1", "elemento 2"))
+inside_sanwich(*("elemento 1", "elemento 2", "elemento 3"))
+inside_sanwich(*("elemento 1", "elemento 2", "elemento 3", "elemento 4"))

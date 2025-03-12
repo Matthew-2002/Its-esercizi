@@ -5,29 +5,45 @@ original list has retained its messages.'''
 
 
 
-messages: list[str] = ["Ciao", "Come stai?", "Spero tutto bene"]
+# defyning functions
 
-def show_messages():
+def show_messages(messages:list[str]):
     for item in messages:
         print(item)
 
-show_messages()
 
-print("------")
+def send_messages(messages):
+    sent_messages:list[str] = []
+    for i in range(len(messages)):
+        print(messages[-1])
+        sent_messages.append(messages[-1])
+        messages.pop()
+    
+        
+    return sent_messages
 
-def send_messages(messages, sent_messages=messages[:]):
-    for item in sent_messages:
-        print(item)
-        messages.remove(item) 
-            
-    return(messages, sent_messages)
+
+# code 
 
 
-print(*send_messages(messages))
+messages: list[str] = ["Ciao", "Come stai?", "Spero tutto bene"]
+print("Messages:\n")
+show_messages(messages)
 
 print("-----")
 
-print(*send_messages(messages=["Ciao", "Come stai?", "Spero tutto bene"]))
+print("Sent Messages:\n", *send_messages(messages))
+print("Messages after send_messages:\n",*messages)
+
+print("-----")
+
+'''print("Messages after send_messages: \n",*messages)
+
+print("-----")
+
+print("Sent Messages:\n",*sent_messages)
+
+#print(*send_messages(messages=["Ciao", "Come stai?", "Spero tutto bene"]))'''
 
 
 

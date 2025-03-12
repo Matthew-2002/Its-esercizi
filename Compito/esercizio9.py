@@ -22,14 +22,14 @@ il numero di termini necessari.'''
 i = 2
 div:int = 3
 pigreco:float = 4
-approx:float = 3.141
+approx:float = 3.1415
 
 while True:
     if i % 2 == 0:
         pigreco -= 4 / div
     else:
         pigreco += 4 / div
-    if round(pigreco, 3) == approx:
+    if round(pigreco, 4) == approx:
         print(f"\nsono stati necessari {i} termini della serie per arrivare all'approssimazione\n")
         break
     i += 1
