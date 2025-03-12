@@ -17,5 +17,5 @@ def car_info(manufactuer, model, **kwarg):
                         }
     car.update(kwarg)
     return car
-car_ = car_info("Ferrari", "La Ferrari", color= "Ferrari")
-print(car_)
+
+print(car_info("Ferrari", "La Ferrari", color= "Ferrari"))

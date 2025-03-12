@@ -4,4 +4,6 @@ Write an import statement at the top of printing_models.py, and
 modify the file to use the imported functions.'''
 
 
-from esercizi
+from esercizio_8_14 import car_info
+
+print(car_info("Suzuki", "Vitara", colore= "grigio", posti="5"))
