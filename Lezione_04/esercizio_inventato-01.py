@@ -3,40 +3,48 @@ import math
 
 
 def numero_primo(n):
-    if n == 1:
-        return("il numero 1 non è primo")
-    elif n < 1:
-        return("Il numero è 0 o negativo")
+    if n <= 1:
+        return False
     else:
         Div = 2
         while Div <= math.sqrt(n):
             if n % Div == 0:
-                return("il numero non è primo")
-                break
-            Div += 1
-        else:
-            return("il numero è primo")
-
-
-def scomposizione(n):
-    numero:int = n
-    i=2
-    if numero_primo(numero) == "il numero è primo":
-        return(f"Il numero {n} si può scomporre come {n}**1")
-    while numero_primo(numero) == "il numero non è primo":
-        if numero % i == 0:
-            if i in primi:
-                primi[i] += 1
+                return False
             else:
-                primi[i] = 1
-            i = 1
-            numero /= i
-        i += 1
+                Div += 1
+        return True
+
+def scomposizione(n): 
+    numero:int = n
+    Div2 = 2
+    primi: dict[int, int] = {}
+    
+    if numero_primo(n) == True:
+        return False
+   
+    while numero_primo(numero) == False:
+       
+        if numero % Div2 == 0:
+            if Div2 in primi:
+                primi[Div2] += 1
+            else:    
+                primi[Div2] = 1
+            numero /= Div2
+        else:
+            Div2 += 1
+            numero /= Div2
+
     if numero in primi:
         primi[numero] += 1
     else:
         primi[numero] = 1
     return primi
-n = int(input("Inserisci il numero di cui vuoi sapere la scomposizione in fattori primi: "))
-primi: dict[int, int] = {}
-print(scomposizione(n))
+
+primi:dict[int] = scomposizione(int(input("Inserisci numero da scomporre in afttori primi: ")))
+
+if primi == False:
+    print("Il numero inserito si può dividere solo per se stesso")
+else:
+    print("Il tuo numero è composto da: ", end= "")
+    for key,value in primi.items():
+        print(f"{key} elevato {value} volte", end= ", ")
