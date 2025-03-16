@@ -32,7 +32,6 @@ def scomposizione(n):
             numero /= Div2
         else:
             Div2 += 1
-            numero /= Div2
 
     if numero in primi:
         primi[numero] += 1
