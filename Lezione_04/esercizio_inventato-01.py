@@ -20,7 +20,7 @@ def scomposizione(n):
     primi: dict[int, int] = {}
     
     if numero_primo(n) == True:
-        return False
+        return primi
    
     while numero_primo(numero) == False:
        
@@ -41,9 +41,9 @@ def scomposizione(n):
 
 primi:dict[int] = scomposizione(int(input("Inserisci numero da scomporre in afttori primi: ")))
 
-if primi == False:
-    print("Il numero inserito si può dividere solo per se stesso")
+if primi == {}:
+    print("Il numero inserito si può dividere solo per 1 e per se stesso")
 else:
     print("Il tuo numero è composto da: ", end= "")
     for key,value in primi.items():
-        print(f"{key} elevato {value} volte", end= ", ")
+        print(f"{key} elevato a {value}", end= ", ")
