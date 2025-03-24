@@ -28,7 +28,7 @@ def scomposizione(n):
                 primi[div] = 1
             numero /= div
         else:
-            Div += 1
+            div += 1
 
     if numero in primi:
         primi[int(numero)] += 1
