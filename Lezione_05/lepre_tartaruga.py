@@ -1,30 +1,33 @@
 import random
 
-percorso: list[any] = []
-posizione_t: int = 1
-posizione_l: int = 1
+posizione_t: int = 0
+posizione_l: int = 0
 
 def posizione_gara(posizione_t, posizione_l):
     
     #creo il percorso
-    percorso: list = []
+    percorso: list[any] = []
     for i in range(1,71):
         percorso.append("_")
 
     #evito list index out of range        
-    if posizione_t-1 >= len(percorso):
-        posizione_t = len(percorso)
-    elif posizione_l-1 >= len(percorso):
-        posizione_l = len(percorso)
-    else:    
-        #inserisco "L" e "T" nel percorso e stampo
-        if posizione_t == posizione_l:
-            print("OUCH!!!")
-            percorso[posizione_t] = "T"
-            percorso[posizione_l-1] =  "L"
-        else:
-            percorso[posizione_t-1] =  "T"
-            percorso[posizione_l-1] =  "L"
+    if posizione_t > len(percorso) - 1:
+        posizione_t = len(percorso) - 1
+    elif posizione_l > len(percorso) - 1:
+        posizione_l = len(percorso) - 1
+    
+    #inserisco "L" e "T" nel percorso e stampo
+    if posizione_t == posizione_l and posizione_l == 70:
+        print("OUCH!!!")
+        percorso[posizione_t-1] = "T"
+        percorso[posizione_l-2] =  "L"
+    elif posizione_t == posizione_l:
+        print("OUCH!!!")
+        percorso[posizione_t+1] = "T"
+        percorso[posizione_l] =  "L"
+    else:
+        percorso[posizione_t] =  "T"
+        percorso[posizione_l] =  "L"
         print("".join(percorso))
 
 def mossa_t(n, posizione_t, meteo):
@@ -90,7 +93,7 @@ print("BANG !!!!! AND THEY'RE OFF !!!!!")
 posizione_gara(posizione_t, posizione_l)
 
 i: int = 0
-while posizione_l < 71 and posizione_t < 71:
+while posizione_l < 70 and posizione_t < 70:
     
     #inserisco le condizioni variabili ogni 10 tick
     if (i // 10) % 2 == 0:
@@ -105,9 +108,9 @@ while posizione_l < 71 and posizione_t < 71:
     i += 1
 
 #controllo il vincitore
-if posizione_t > 70 and posizione_l > 70:
+if posizione_t == 70 and posizione_l == 70:
     print("TORTOISE WINS! || VAY!!!")
-elif posizione_t > 70:
+elif posizione_t >= 70:
     print("TORTOISE WINS! || VAY!!!")
 else:
     print("HARE WINS || YUCH!!!")
