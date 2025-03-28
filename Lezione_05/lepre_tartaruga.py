@@ -26,41 +26,64 @@ def posizione_gara(posizione_t, posizione_l):
         percorso[posizione_t+1] = "T"
         percorso[posizione_l] =  "L"
     else:
-        percorso[posizione_t-1] =  "T"
-        percorso[posizione_l-1] =  "L"
+        percorso[posizione_t] =  "T"
+        percorso[posizione_l] =  "L"
     print("".join(percorso))
 
 def mossa_t(n, posizione_t, meteo, energia):
     
     #percentuali mosse con meteo soleggiato
     if meteo == 'soleggiato':   
+        
+        #passo veloce
         if 1 <= n <= 50:
             if energia >= 5:
-                posizione_t += 5
+                posizione_t += 3
                 energia -= 5
+            else:
+                energia += 10
+        #passo lento
         elif 51 <= n <= 80:
-            if energia >= 1:
+            if energia >= 3:
                 posizione_t += 1
-                energia -= 1
+                energia -= 3
+            else:
+                energia += 10
+        #scivolata
         else:
-            posizione_t -= 6
-            if posizione_t < 1:
-                posizione_t = 1
+            if energia >= 10:
+                posizione_t -= 6
+                energia -=10
+            else:
+                energia += 10
+        if posizione_t < 1:
+            posizione_t = 1
         return posizione_t
     
     #percentuali mosse con meteo piovoso
     if meteo == 'piovoso':
+        
+        #passo veloce
         if 1 <= n <= 45:
-            if energia >= 3:    
+            if energia >= 5:    
                 posizione_t += 3
-                energia -= 3
+                energia -= 5
+            else:
+                energia += 10
+        #passo lento
         elif 46 <= n <= 70:
-            if energia >= 1:    
+            if energia >= 3:    
                 posizione_t += 1
-                energia -= 1
+                energia -= 3
+            else:
+                energia += 10
+        #scivolata
         else:
-            posizione_t -= 6
-        posizione_t -= 1
+            if energia >= 10:
+                posizione_t -= 6
+                energia -= 10
+            else:
+                energia += 10
         if posizione_t < 1:
             posizione_t = 1
         return posizione_t
@@ -69,37 +92,71 @@ def mossa_l(n, posizione_l, meteo, energia):
     
     #percentuali mosse con meteo soleggiato  
     if meteo == 'soleggiato':
+        
+        #grande balzo
         if 1 <= n <= 20:
-            if energia >= 9:    
+            if energia >= 15:    
                 posizione_l += 9
-                energia -= 9
+                energia -= 15
+            else:
+                energia += 10
+        #piccolo balzo
         elif 21 <= n <= 50:
-            if energia >= 1:
+            if energia >= 5:
                 posizione_l += 1
-                energia -= 1
+                energia -= 5
+            else:
+                energia += 10
+        #piccola scivolata
         elif 51 <= n <= 70:
-            posizione_l -= 2
+            if energia >= 8:
+                posizione_l -= 2
+                energia -= 8
+            else:
+                energia += 10
+        #grande scivolata
         elif 71 <= n <= 80:
-            posizione_l -= 12        
+            if energia >= 20:
+                posizione_l -= 12
+                energia -= 20
+            else:
+                energia += 10      
         if posizione_l < 1:
             posizione_l = 1
         return posizione_l
     
     #percentuali mosse con meteo soleggiato    
     if meteo == 'piovoso':
+        
+        #grande balzo
         if 1 <= n <= 17:
-            if energia >= 9:    
-                energia -= 9
+            if energia >= 15:    
                 posizione_l += 9
+                energia -= 15
+            else:
+                energia += 10
+        #piccolo balzo
         elif 18 <= n <= 44:
-            if energia >= 1:
-                energia -= 1            
+            if energia >= 5:
                 posizione_l += 1
+                energia -= 5
+            else:
+                energia += 10
+        #piccola scivolata
         elif 45 <= n <= 70:
-            posizione_l -= 2
+            if energia >= 8:
+                posizione_l -= 2
+                energia -= 8
+            else:
+                energia += 10
+        #grande scivolata
         elif 71 <= n <= 83:
-            posizione_l -= 12        
-        posizione_l -= 2
+            if energia >= 20:
+                posizione_l -= 12
+                energia -= 20
+            else:
+                energia += 10
+        
         if posizione_l < 1:
             posizione_l = 1
         return posizione_l
