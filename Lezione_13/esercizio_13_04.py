@@ -20,6 +20,6 @@ numero con una sola cifra.
 def recursiveDigitCounter(n):
     if n // 10 == 0:
         return 1
-    return recursiveDigitCounter((n - n // 10)/ 10) + 1
+    return recursiveDigitCounter((n - n % 10)/ 10) + 1
 
-print(recursiveDigitCounter(10))
+print(recursiveDigitCounter(120005))
