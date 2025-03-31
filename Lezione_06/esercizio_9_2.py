@@ -1,27 +1,16 @@
-class Student:
+'''
+9-2. Three Restaurants: Start with your class from 
+Exercise 9-1. Create three different instances from 
+the class, and call describe_restaurant() for each 
+instance.'''
 
-    def __init__(self, name: str, studyProgram: str, age: int, gender: str):
-        
-        self.name = name
-        self.studyProgram = studyProgram
-        self.gender = gender
-        self.age = age
 
-    def print_info(self):
+from esercizio_9_1 import Restaurant
 
-        print(
-            f"Scheda:\n"
-            f"    Nome: {self.name}\n"
-            f"    Corso di studi: {self.studyProgram}\n"
-            f"    Età: {self.age}\n"
-            f"    Sesso: {self.gender}\n"
-        )
-        
-student1 = Student("Matteo", "Fabbri", 22, "Maschio")
-student2 = Student("Fabio", "Gabriele", 32, "Maschio")
-student3 = Student("Alice", "Cacmpolungo", 19, "Femmina")
+r1 = Restaurant("r1", "c1")
+r2 = Restaurant("r2", "c2")
+r3 = Restaurant("r3", "c3")
 
-student1.print_info()
-student2.print_info()
-student3.print_info()
-
+r1.describe_restaurant()
+r2.describe_restaurant()
+r3.describe_restaurant()

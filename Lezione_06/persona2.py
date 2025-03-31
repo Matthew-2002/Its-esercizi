@@ -27,5 +27,6 @@ class Persona:
     
     def getAge(self) -> int:
         return self.age
+    
 
         

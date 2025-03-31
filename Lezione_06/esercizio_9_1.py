@@ -18,17 +18,17 @@ class Restaurant:
     
     def describe_restaurant(self):
       
-        print(self.restaurant_name)
-        print(self.cuisine_type)
+        print(f"{self.restaurant_name}, {self.cuisine_type}")
     
     def open_restaurant(self):
     
         print("The restaurant is open")
     
-restaurant = Restaurant("Gaudì", "italiana")
+if __name__ == '__main__':
+    restaurant = Restaurant("Gaudì", "italiana")
 
-print(restaurant.restaurant_name)
-print(restaurant.cuisine_type)
+    print(restaurant.restaurant_name)
+    print(restaurant.cuisine_type)
 
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
+    restaurant.describe_restaurant()
+    restaurant.open_restaurant()
