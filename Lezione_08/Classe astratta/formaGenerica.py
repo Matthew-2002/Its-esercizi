@@ -6,4 +6,14 @@ class FormaGenerica(ABC):
     def draw(self) -> None:
         pass
 
-shape: FormaGenerica = FormaGenerica()
+    def setShape(self, shape: str) -> None:
+        if shape:
+            self.shape = shape
+        else:
+            print("Errore")
+
+    def getShape(self):
+        return self.shape
+    
+
+#shape: FormaGenerica = FormaGenerica()
