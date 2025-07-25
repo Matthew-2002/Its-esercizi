@@ -14,3 +14,6 @@ def blackjack_hand_total(cards: list[int]) -> int:
         punteggio -= 10
         assi -= 1
     return punteggio
+
+
+blackjack_hand_total([])

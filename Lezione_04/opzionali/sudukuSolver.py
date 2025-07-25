@@ -11,7 +11,7 @@
     Solve the puzzle by filling in the remaining empty 
     cells with valid numbers.'''
 
-'''
+
 #creo il campo di gioco
 campo: list[str] = [' ' for i in range(81)]
 inserimento: str = input("Inserisci numeri \
@@ -81,6 +81,6 @@ def mostra_campo(campo):
 
 while ' ' in campo:
     campo = controllo_semplice(campo)
-mostra_campo(campo)'''
+mostra_campo(campo)
 
 
