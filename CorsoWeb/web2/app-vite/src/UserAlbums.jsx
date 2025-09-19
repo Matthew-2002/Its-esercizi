@@ -19,8 +19,7 @@ const UserAlbums = () => {
 
   const [albums,setAlbums]=useState([]);
   const [albumSelected,setAlbumSelected]=useState(0)
-//useState Photos
-
+  const photos
 
 
 
@@ -38,6 +37,17 @@ const UserAlbums = () => {
 
 
   const getAlbums=async ()=>{
+    try{
+      const url=  urlAlbums+"?userId="+userSelected ;
+      const response = await fetch(url);
+      const result = await response.json();
+      setAlbums(result);
+    }catch(err){
+      console.log(err)
+    }
+  }
+
+  const getPhotos=async ()=>{
     try{
       const url=  urlAlbums+"?userId="+userSelected ;
       const response = await fetch(url);

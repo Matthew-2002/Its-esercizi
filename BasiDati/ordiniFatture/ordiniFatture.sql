@@ -23,7 +23,7 @@ CREATE domain CodiceFiscale as varchar(16) check
 
 CREATE domain partitaiva as varchar(11) check (value ~ '^[0-9]{11}$');
 
-CREATE domain Telefono as varchar(17) check (value ~ '^\+([0-9]{1,3})([ ]?[0-9]){6,14}$');
+CREATE domain Telefono as varchar(17) check (value ~ ('^\+[0-9]{1,3}\s?[0-9]{6,14}$');
 
 CREATE domain Email as varchar(100) check
         (value ~ '^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$');
