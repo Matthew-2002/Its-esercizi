@@ -68,3 +68,4 @@ insert into ArrPart (codice, comp, partenza, arrivo)
 values (132, 'Apitalia', 'HTR', 'CIA');
 
 commit;
+
