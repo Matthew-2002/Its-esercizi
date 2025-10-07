@@ -1,0 +1,1 @@
+'openssl rsa -in FAprivkey.pem -text -noout'
