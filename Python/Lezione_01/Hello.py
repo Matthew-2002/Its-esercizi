@@ -4,10 +4,10 @@
 from datetime import datetime, timedelta
 
 assenze: float = 187
-erogate: float = 632.5
+erogate: float = 655
 presenze: float = erogate - assenze
 
-#dati aggiornati al 26 settembre
+#dati aggiornati al 6 ottobre
 
 max_assenze: float = 0.2
 giorni: int = 0
