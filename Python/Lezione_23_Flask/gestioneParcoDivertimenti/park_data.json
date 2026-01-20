@@ -1,0 +1,88 @@
+{
+    "rides": {
+        "RC01": {
+            "id": "RC01",
+            "name": "Thunderbolt",
+            "min height": 140,
+            "category": "roller_coaster",
+            "inversions": 3
+        },
+        "RC02": {
+            "id": "RC02",
+            "name": "Lightning Loop",
+            "min height": 130,
+            "category": "roller_coaster",
+            "inversions": 5
+        },
+        "RC03": {
+            "id": "RC03",
+            "name": "Dragon Fury",
+            "min height": 135,
+            "category": "roller_coaster",
+            "inversions": 4
+        },
+        "RC04": {
+            "id": "RC04",
+            "name": "Twister",
+            "min height": 125,
+            "category": "roller_coaster",
+            "inversions": 2
+        },
+        "RC05": {
+            "id": "RC05",
+            "name": "Mega Drop",
+            "min height": 145,
+            "category": "roller_coaster",
+            "inversions": 1
+        },
+        "RC06": {
+            "id": "RC06",
+            "name": "Sky Screamer",
+            "min height": 150,
+            "category": "roller_coaster",
+            "inversions": 6
+        },
+        "C01": {
+            "id": "C01",
+            "name": "Magic Horses",
+            "min height": 90,
+            "category": "family",
+            "animals": ["horse", "unicorn", "dragon"]
+        },
+        "C02": {
+            "id": "C02",
+            "name": "Fairy Carousel",
+            "min height": 95,
+            "category": "family",
+            "animals": ["fairy", "butterfly"]
+        },
+        "C03": {
+            "id": "C03",
+            "name": "Ocean Ride",
+            "min height": 100,
+            "category": "family",
+            "animals": ["dolphin", "fish", "seahorse"]
+        },
+        "C04": {
+            "id": "C04",
+            "name": "Safari Adventure",
+            "min height": 90,
+            "category": "family",
+            "animals": ["lion", "elephant", "giraffe"]
+        },
+        "C05": {
+            "id": "C05",
+            "name": "Jungle Joy",
+            "min height": 95,
+            "category": "family",
+            "animals": ["monkey", "parrot", "tiger"]
+        },
+        "C06": {
+            "id": "C06",
+            "name": "Enchanted Garden",
+            "min height": 100,
+            "category": "family",
+            "animals": ["rabbit", "deer", "owl"]
+        }
+    }
+}   

@@ -95,7 +95,7 @@ def powerset_size(n: int) -> int:
 
     return 2**n
 
-def apply_twice(fn, x):
+
     
     
             
