@@ -12,7 +12,7 @@ presenze: float = erogate - assenze
 max_assenze: float = 0.2
 giorni: int = 0
 giorni_lez_mancanti = int (1080 - erogate) // 5
-giorni_tot_mancanti_we = giorni_lez_mancanti+giorni_lez_mancanti*2/7
+giorni_tot_mancanti_we = giorni_lez_mancanti+giorni_lez_mancanti*2/5
 
 print(f'Percentuale asssenza attuale {(assenze*100/erogate):.2f}%')
 
@@ -20,7 +20,7 @@ while (assenze/erogate) > max_assenze:
     erogate += 5
     giorni += 1
 
-giorni_per_obiettivo = giorni*2/7 + giorni
+giorni_per_obiettivo = giorni*2/5 + giorni
 data_obiettivo = datetime.today() + timedelta(giorni_per_obiettivo)
 data_fine_corso = datetime.today() + timedelta(giorni_tot_mancanti_we)
 
