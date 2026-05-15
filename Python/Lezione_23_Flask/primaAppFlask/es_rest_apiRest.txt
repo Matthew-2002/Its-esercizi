@@ -1,0 +1,105 @@
+1. Progettazione risorse: Considera un centro sportivo 
+che gestisce corsi, istruttori e iscritti. Elenca le 
+principali risorse e scrivi gli URI corretti. Indica 
+anche esempi di URI errati.
+
+
+/corsi
+/istruttori
+/iscritti
+
+2. Metodi HTTP e CRUD: Per ciascuna operazione indica 
+il metodo HTTP e il codice di stato corretto:
+
+    Creare un nuovo corso
+    Aggiornare i dati di un istruttore
+    Eliminare un iscritto
+    Ottenere l’elenco dei corsi
+    Tentare di accedere a un corso inesistente
+
+POST /corsi {...}
+PUT /istruttori/id {...}
+DELETE /iscritto/id
+GET /corsi
+GET /corsi/id_inesistente
+
+
+3. Analisi JSON: Ecco un oggetto JSON relativo a 
+una prenotazione di campo da tennis: 
+
+Content-Type: application/json
+{
+   'id': 12,
+   'cliente': 'Luca Neri', 
+   'campo': 3, 
+   'data': '2025-03-20', 
+   'ora': '18:00', 
+   'durata_ore': 2
+}
+
+BASE URL: https://api.esempio.it
+
+Individua la risorsa e utilizza i metodi HTTP per 
+crea una nuova prenotazione con i dati forniti, 
+modificare l'intera prenotazione, e creare una 
+nuova prenotazione con dati differenti. Indica 
+anche il codice di stato corretto. 
+
+POST /prenotazioni {
+   'id': 12,
+   'cliente': 'Luca Neri', 
+   'campo': 3, 
+   'data': '2025-03-20', 
+   'ora': '18:00', 
+   'durata_ore': 2
+} -> 201
+PUT /prenotazioni/12  {
+   'id': 12,
+   'cliente': 'Luca Bianchi', 
+   'campo': 7,
+   'data': '2025-03-20', 
+   'ora': '8:30', 
+   'durata_ore': 1,5
+} -> 200
+POST /prenotazioni {
+   'id': 13,
+   'cliente': 'Mara Rossi', 
+   'campo': 7,
+   'data': '2025-03-20', 
+   'ora': '10:00', 
+   'durata_ore': 1,5
+} -> 201
+
+
+4. Progetta una mini API: un’agenzia di viaggi deve 
+gestire destinazioni, clienti e prenotazioni. 
+Definisci 5 endpoint REST (metodo + URI + esempio 
+di risposta JSON).
+
+
+GET /destinazioni?nazione=Italia
+--> 200 {
+    {
+    "nazione": "Italia",
+    "regione": "Lazio",
+    "città": "Roma"
+    },
+    {
+    "nazione": "Italia",
+    "regione": "Campania",
+    "città": "Napoli"
+    }
+}
+POST /clienti {
+    "id": 101
+    "nome": "Luca Neri",
+    "email": "luca.neri@email.com",
+    "telefono": "+390000000000"
+}
+POST /prenotazioni {
+    "id": 201,
+    "cliente_id": 101,
+    "destinazione": "Roma",
+    "data_partenza": "01-01-2025",
+    "data_ritorno": "10-01-2025"
+}

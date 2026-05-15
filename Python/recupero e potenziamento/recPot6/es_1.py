@@ -13,4 +13,4 @@ def PalindomeStr(s:str) -> bool:
         else:
             return False
 
-print(PalindomeStr('amoroma'))
+print(PalindomeStr('amo romam'))
